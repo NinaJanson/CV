@@ -22,6 +22,27 @@ body {
   background-color: lightyellow;
 }
 
+.nav-header {
+  color: grey;
+}
+
+.nav-header:hover {
+  color: black;
+  background-color: lightsalmon;
+  font-size: larger;
+  border-radius: 5px;
+}
+.nav-header:active {
+  color: lightgoldenrodyellow;
+  background-color: black;
+  font-size: larger;
+  font-weight: bolder; /* funktioniert nicht */
+}
+
+.nav-header + .nav-header {
+  margin-left: 2rem;
+}
+
 h1 {
   padding: 30px 50px;
 }
@@ -30,4 +51,19 @@ h1 {
   padding: 20px 40px;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* .main > * + * { margin-top: 48px} */
+article + article {
+  margin-top: 2.5rem;
+}
+
+/* Unterschied ohne Punkt? Andere Lsg .main > * {... */
+.main article {
+  border-top: lightsalmon 5px solid;
+}
+
+/* .main > *:first-child */
+article:first-child {
+  border-top: none;
 }
