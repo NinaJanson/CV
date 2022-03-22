@@ -16,6 +16,11 @@ body {
   margin: 0px;
 }
 
+::selection {
+  background-color: darkmagenta;
+  color: white;
+}
+
 .header {
   padding: 48px 16px;
   text-align: center;
@@ -60,10 +65,13 @@ article + article {
 
 /* Unterschied ohne Punkt? Andere Lsg .main > * {... */
 .main article {
-  border-top: lightsalmon 5px solid;
+  border-top: purple 5px solid;
 }
 
 /* .main > *:first-child */
 article:first-child {
   border-top: none;
+}
+.profession::after {
+  content: "👩🏼‍💻 🚀";
 }
