@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-* {
+/* * (universal) zu html geändert */
+html {
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -33,15 +34,21 @@ body {
 
 .nav-header:hover {
   color: black;
-  background-color: lightsalmon;
-  font-size: larger;
+  background-color: rgb(179, 95, 204);
+  font-size: 24px;
   border-radius: 5px;
+  padding: 0.5rem 1rem;
 }
 .nav-header:active {
   color: lightgoldenrodyellow;
-  background-color: black;
-  font-size: larger;
-  font-weight: bolder; /* funktioniert nicht */
+  background-color: purple;
+  font-size: 24px;
+  font-weight: 900; /* funktioniert nicht */
+}
+
+/* eingefügt damit sich der Header nicht verschiebt wenn die Schrift beim hoven größer wird */
+nav {
+  height: 24px;
 }
 
 .nav-header + .nav-header {
@@ -63,7 +70,7 @@ article + article {
   margin-top: 2.5rem;
 }
 
-/* Unterschied ohne Punkt? Andere Lsg .main > * {... */
+/* Unterschied ohne Punkt? egal da es immer nur ein main geben sollte. Andere Lsg .main > * {... */
 .main article {
   border-top: purple 5px solid;
 }
@@ -74,4 +81,12 @@ article:first-child {
 }
 .profession::after {
   content: "👩🏼‍💻 🚀";
+}
+
+.experiences-heading {
+  display: inline-block;
+}
+
+.experiences-subheading {
+  display: inline-block;
 }
