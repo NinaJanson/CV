@@ -23,9 +23,25 @@ body {
 }
 
 .header {
-  padding: 48px 16px;
+  padding: 32px 16px;
+  padding-top: 48px; /* in der Position Task hinzugefügt muss aber nicht */
   text-align: center;
   background-color: lightyellow;
+  position: relative;
+  _position: sticky;
+  top: 0px;
+}
+
+.hireme {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  border: purple 2px solid;
+  font-size: 24px;
+  padding: 5px;
+  background-color: lightpink;
+  color: rgb(70, 7, 70);
+  border-radius: 5px;
 }
 
 .nav-header {
@@ -56,11 +72,11 @@ nav {
 }
 
 h1 {
-  padding: 30px 50px;
+  padding: 20px 50px;
 }
 
 .main {
-  padding: 20px 40px;
+  padding: 16px 40px;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -73,12 +89,25 @@ article + article {
 /* Unterschied ohne Punkt? egal da es immer nur ein main geben sollte. Andere Lsg .main > * {... */
 .main article {
   border-top: purple 5px solid;
+  padding: 0px 16px; /* in der Position Task hinzugefügt nachdem h2 rausgerückt wurde, muss aber nicht) */
 }
 
 /* .main > *:first-child */
-article:first-child {
+.article:first-child {
   border-top: none;
 }
+
+/* es ist besser mit Klassen zu arbeiten, siehe unten 
+article > h2 {
+  position: relative;
+  left: -16px;
+} */
+
+.article-heading {
+  position: relative;
+  left: -16;
+}
+
 .profession::after {
   content: "👩🏼‍💻 🚀";
 }
