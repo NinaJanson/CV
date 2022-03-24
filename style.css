@@ -63,6 +63,23 @@ body {
   }
 }
 
+.nav-flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  _justify-content: center;
+  _border: black 5px solid;
+}
+
+@media screen and (min-width: 786px) {
+  .nav-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 1.5rem;
+  }
+}
+
 .nav-header {
   color: grey;
 }
@@ -82,12 +99,14 @@ body {
 }
 
 /* eingefügt damit sich der Header nicht verschiebt wenn die Schrift beim hoven größer wird */
-nav {
+_nav {
   height: 1.5rem;
 }
 
-.nav-header + .nav-header {
-  margin-left: 2rem;
+@media screen and (min-width: 786px) {
+  .nav-header + .nav-header {
+    margin-left: 2rem;
+  }
 }
 
 @media print {
@@ -110,11 +129,13 @@ h1 {
 
 .profession {
   font-size: 0.25em;
+  padding-bottom: 2rem;
 }
 
 .main {
   padding: 1rem;
-  max-width: 75ch;
+  _max-width: 75ch;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -156,10 +177,24 @@ article > h2 {
   content: "👩🏼‍💻 🚀";
 }
 
-.experiences-heading {
+_.experiences-heading {
   display: inline-block;
 }
 
-.experiences-subheading {
+_.experiences-subheading {
   display: inline-block;
+}
+
+.header-flexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 786px) {
+  .header-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
