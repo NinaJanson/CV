@@ -28,6 +28,12 @@ h3 {
 
 body {
   margin: 0;
+  --text-color: black;
+  --header-background1: lightyellow;
+  --header-background2: purple;
+  --nav-color: grey;
+  --hire-me: lightpink;
+  --nav-hover: rgb(179, 95, 204);
 }
 
 ::selection {
@@ -43,17 +49,21 @@ body {
   position: relative;
   _position: sticky;
   _top: 0;
-  background-image: linear-gradient(purple, lightyellow 30%);
+  _background-image: linear-gradient(purple, lightyellow 30%);
+  background-image: linear-gradient(
+    var(--header-background2),
+    var(--header-background1) 30%
+  );
 }
 
 .hireme {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  border: purple 0.125rem solid;
+  border: var(--header-background2) 0.125rem solid;
   font-size: 1.5rem;
   padding: 0.25rem;
-  background-color: lightpink;
+  background-color: var(--hire-me);
   color: rgb(70, 7, 70);
   border-radius: 0.5rem;
 }
@@ -82,19 +92,19 @@ body {
 }
 
 .nav-header {
-  color: grey;
+  color: var(--nav-color);
 }
 
 .nav-header:hover {
-  color: black;
-  background-color: rgb(179, 95, 204);
+  color: var(--text-color);
+  background-color: var(--nav-hover);
   font-size: 1.5rem;
   border-radius: 5px;
   padding: 0.5rem 1rem;
 }
 .nav-header:active {
-  color: lightgoldenrodyellow;
-  background-color: purple;
+  color: var(--header-background1);
+  background-color: var(--header-background2);
   font-size: 1.5rem;
   font-weight: 900; /* funktioniert nicht */
 }
@@ -153,7 +163,7 @@ h1 {
 
 /* Unterschied ohne Punkt? egal da es immer nur ein main geben sollte. Andere Lsg .main > * {... */
 .main article {
-  border-top: purple 0.25rem solid;
+  border-top: var(--header-background2) 0.25rem solid;
   padding: 0 1.5rem; /* in der Position Task hinzugefügt nachdem h2 rausgerückt wurde, muss aber nicht >aricel heading und border line so auf einer höher) */
   left: -1.5rem;
 }
