@@ -74,6 +74,14 @@ body {
   }
 }
 
+.header:hover .hireme {
+  transform: translate(-30%, 50%) scale(1.2);
+  transition: 1.5s;
+}
+_.header:focus-within .hireme {
+  transform: scale(2);
+}
+
 .nav-flexbox {
   display: flex;
   flex-direction: column;
@@ -92,15 +100,26 @@ body {
 }
 
 .nav-header {
+  padding: 0.25rem 0.5rem;
   color: var(--nav-color);
+  transition: color 1s ease-in-out;
+}
+
+.nav-header:focus {
+  color: var(--header-background2);
+  outline-color: black;
+  outline-style: dashed;
+  background-color: lightblue;
+  _transition: color 5s ease-in-out;
 }
 
 .nav-header:hover {
   color: var(--text-color);
   background-color: var(--nav-hover);
-  font-size: 1.5rem;
+  _font-size: 1.5rem;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
+  _padding: 0.25rem 0.25rem;
+  transition: background-color 1s;
 }
 .nav-header:active {
   color: var(--header-background1);
